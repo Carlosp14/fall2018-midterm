@@ -11,7 +11,7 @@ Date:               10/20/18
 
 using namespace std;
 
-string get_string(string prompt)
+string get_string(string prompt)        //The prompt will get the string for the user
 {
     string input;
     cout << prompt;
@@ -19,7 +19,7 @@ string get_string(string prompt)
     return input;
 }
 
-int char_count(string c)
+int char_count(string c)                //Simple character count using a for loop and counter 
 {
     int counter = 0;
     for (int i=0; i < c.size(); i++)
@@ -32,10 +32,13 @@ int char_count(string c)
 
 int main()
 {
-    string input;
-    input = get_string("Please enter a string to count its character:");
+    string input;                                                                   
+    input = get_string("Please enter a string to count its character:"); 
+    
     int string_length;
     string_length = char_count(input);
+    
     cout << "Your string is " << string_length << " characters long!" << endl;
+    
     return 0;
 }
